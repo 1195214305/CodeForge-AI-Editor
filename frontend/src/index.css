@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式 - 赛博朋克风格 */
+:root {
+  --cyber-orange: #ff6b35;
+  --cyber-cyan: #00e5cc;
+  --cyber-pink: #ff006e;
+  --cyber-yellow: #ffbe0b;
+  --dark-bg: #0a0a0f;
+  --dark-surface: #1a1a24;
+  --dark-border: #2a2a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: var(--dark-bg);
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-orange);
+}
+
+/* 赛博网格背景 */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0, 229, 204, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 204, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* 霓虹发光效果 */
+.neon-glow {
+  box-shadow: 0 0 10px rgba(0, 229, 204, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 229, 204, 0.8);
+}
+
+/* 玻璃拟态效果 */
+.glass {
+  background: rgba(26, 26, 36, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 229, 204, 0.2);
+}
