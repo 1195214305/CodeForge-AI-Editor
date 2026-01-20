@@ -15,7 +15,6 @@ export default function Terminal() {
   const terminalRef = useRef<HTMLDivElement>(null)
   const xtermRef = useRef<XTerm | null>(null)
   const fitAddonRef = useRef<FitAddon | null>(null)
-  const [currentCommand, setCurrentCommand] = useState('')
 
   const { terminalOpen, toggleTerminal, addTerminalHistory, clearTerminalHistory } = useEditorStore()
 

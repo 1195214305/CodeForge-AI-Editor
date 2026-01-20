@@ -172,7 +172,7 @@ const deleteNode = (nodes: FileNode[], path: string): FileNode[] => {
 // 创建 Zustand Store
 export const useEditorStore = create<EditorState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       // 初始状态
       files: createDefaultFiles(),
       currentFile: null,

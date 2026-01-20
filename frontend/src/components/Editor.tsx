@@ -3,7 +3,7 @@
  * 代码编辑器核心组件，支持多语言语法高亮
  */
 
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import MonacoEditor from '@monaco-editor/react'
 import { useEditorStore } from '../store/editorStore'
 import { Save, FileCode } from 'lucide-react'
@@ -32,12 +32,12 @@ export default function Editor() {
   }
 
   // 处理编辑器挂载
-  const handleEditorDidMount = (editor: any) => {
+  const handleEditorDidMount = (editor: any, monaco: any) => {
     editorRef.current = editor
 
     // 自定义快捷键
     editor.addCommand(
-      window.monaco.KeyMod.CtrlCmd | window.monaco.KeyCode.KeyS,
+      monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS,
       () => {
         console.log('保存文件:', currentFile?.name)
         // 这里可以添加保存逻辑

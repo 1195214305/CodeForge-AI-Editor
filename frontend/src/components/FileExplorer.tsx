@@ -4,7 +4,7 @@
  */
 
 import { useState } from 'react'
-import { useEditorStore, FileNode } from '../store/editorStore'
+import { useEditorStore, type FileNode } from '../store/editorStore'
 import {
   Folder,
   FolderOpen,
