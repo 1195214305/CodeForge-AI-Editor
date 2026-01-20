@@ -1,0 +1,13 @@
+{
+  "name": "codeforge-ai-editor",
+  "version": "1.0.0",
+  "description": "基于 ESA Pages 的轻量级 AI 代码编辑器",
+  "scripts": {
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "dev": "cd frontend && npm run dev"
+  },
+  "keywords": ["esa", "ai", "editor", "monaco", "xterm"],
+  "author": "",
+  "license": "MIT"
+}
